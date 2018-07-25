@@ -47,5 +47,6 @@ cask "harvest"
 cask "gpg-suite"
 cask "notion"
 cask "aerial"
+cask "whatsapp"
 
 mas "todoist", id: 585829637
