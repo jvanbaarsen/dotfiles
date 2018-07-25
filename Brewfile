@@ -24,6 +24,7 @@ brew "zsh-syntax-highlighting"
 brew "direnv"
 brew "redis", restart_service: true
 brew "postgresql", restart_service: true
+brew "the_silver_searcher"
 
 cask "tableplus"
 cask "sip"
@@ -45,5 +46,6 @@ cask "basecamp"
 cask "harvest"
 cask "gpg-suite"
 cask "notion"
+cask "aerial"
 
 mas "todoist", id: 585829637
