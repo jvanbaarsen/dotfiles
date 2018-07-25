@@ -40,5 +40,6 @@ cask "bartender"
 cask "divvy"
 cask "basecamp"
 cask "harvest"
+cask "gpg-suite"
 
 mas "todoist", id: 585829637

@@ -1,0 +1,10 @@
+log
+tmp
+doc
+coverage
+public/assets
+*.sql
+tags
+/.git/
+.keep
+build

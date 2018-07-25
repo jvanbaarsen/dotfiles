@@ -17,12 +17,29 @@ else
   echo "...Already installed, skipping"
 fi
 
-echo "- Linking files"
-ln -nfs "$(pwd)/.zshrc" "$HOME/.zshrc"
-ln -nfs "$(pwd)/.tmux.conf" "$HOME/.tmux.conf"
-
 echo "- Creating needed folders"
 mkdir -p ~/Development
 mkdir -p ~/.tmp
+mkdir -p ~/.config
+
+echo "- Linking files"
+ln -nfs "$(pwd)/.zshrc" "$HOME/.zshrc"
+ln -nfs "$(pwd)/.tmux.conf" "$HOME/.tmux.conf"
+ln -nfs "$(pwd)/.vimrc" "$HOME/.vimrc"
+ln -nfs "$(pwd)/.vim" "$HOME/.vim"
+ln -nfs "$(pwd)/.vim" "$HOME/.config/nvim"
+ln -nfs "$(pwd)/.ackrc" "$HOME/.ackrc"
+ln -nfs "$(pwd)/.agignore" "$HOME/.agignore"
+ln -nfs "$(pwd)/.git_template" "$HOME/.git_template"
+ln -nfs "$(pwd)/.gitconfig" "$HOME/.gitconfig"
+ln -nfs "$(pwd)/gitignore" "$HOME/.gitignore"
+ln -nfs "$(pwd)/.railsrc" "$HOME/.railsrc"
+
+echo "- Installing Vim plugin manager"
+if  [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+else
+  echo "...Already installed, skipping"
+fi
 
 echo "All done, don't forget to restart your shell"

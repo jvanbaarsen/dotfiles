@@ -1,0 +1,6 @@
+--ignore-dir=public/assets
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=build
+--ignore-file=is:tags
+--ignore-dir=coverage
