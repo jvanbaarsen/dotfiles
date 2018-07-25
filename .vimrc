@@ -53,11 +53,6 @@ Plugin 'fatih/vim-go'
 Plugin 'dsawardekar/ember.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 
-" Vim tmux stuff
-Plugin 'christoomey/vim-tmux-runner'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'benmills/vimux'
-
 " Color Scheme
 Plugin 'chriskempson/base16-vim'
 Plugin 'endel/vim-github-colorscheme'
@@ -107,6 +102,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 " Elixir support
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'mhinz/vim-mix-format'
 
 " Ruby run support
 Plugin 'stjernstrom/vim-ruby-run'
@@ -207,6 +203,9 @@ let g:reek_on_loading = 0
 
 " Netrw stuff
 let g:netrw_liststyle=3
+
+
+let g:mix_format_on_save = 1 " Enable Elixir auto format
 
 " Decide what colorscheme to use
 if $USE_DARK_THEME
