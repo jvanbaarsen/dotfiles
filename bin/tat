@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Attach or create tmux session named the same as current directory.
+
+session_name="$(basename "$PWD" | tr . -)"
+
+session_exists() {
+  tmux list-sessions | sed -E 's/:.*$//' | grep -q "^$session_name$"
+}
+
+not_in_tmux() {
+  [ -z "$TMUX" ]
+}
+
+if not_in_tmux; then
+  tmux new-session -As "$session_name"
+else
+  if ! session_exists; then
+    if [ $# -eq 1 ]; then
+      new_dir="$HOME/Development/$1"
+      if [ ! -d $new_dir ]; then
+        echo "Directory $new_dir does not exist"
+        exit 1
+      fi
+      cd "$HOME/Development/$1"
+
+      session_name="$(basename "$PWD" | tr . -)"
+    fi
+    (TMUX='' tmux new-session -Ad -s "$session_name")
+  fi
+  tmux switch-client -t "$session_name"
+fi

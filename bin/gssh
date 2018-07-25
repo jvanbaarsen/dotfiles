@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+remote_name = ARGV[0]
+
+if remote_name.nil?
+  puts "You need to specify the name of the remote to SSH to"
+  exit 1
+end
+
+url = `git remote get-url --push #{remote_name}`
+if $?.exitstatus > 0
+  puts ""
+  puts "Available remotes:"
+  system("git remote -v")
+  exit 1
+end
+
+parsed_url = url.match(/.*@(.*):.*/)
+ssh_user = `cat .git/ssh_user | grep #{remote_name}= 2> /dev/null`.chomp
+
+ssh_user = if ssh_user.empty?
+             "root"
+           else
+             ssh_user.match(/.*=(.*)/)[1]
+           end
+
+system("ssh #{ssh_user}@#{parsed_url[1]}")

@@ -1,0 +1,157 @@
+# Show content when we LS into a folder
+chpwd() {
+  ls -lrthG
+}
+
+dev() { cd ~/Development/$1; }
+_dev() { _files -W ~/Development -/; }
+compdef _dev dev
+
+function g {
+  if [[ $# > 0 ]]; then
+    hub $@
+  else
+    hub status
+  fi
+}
+compdef g=git
+
+function gdc() {
+  if [[ $# -eq 0 ]] ; then
+    COMMITS=$(git cherry master | wc -l | xargs)
+  else
+    COMMITS=$(git cherry $1 | wc -l | xargs)
+  fi
+  echo "Commit count: $COMMITS"
+}
+
+function grebase {
+  if [[ $# > 0 ]]; then
+    g rebase -i HEAD~$1
+  else
+    echo "You need to provide the number of commits"
+  fi
+}
+
+function rhost() {
+  sed -i '' $1d ~/.ssh/known_hosts
+}
+
+function git-nuke {
+  git branch -D $1
+  git push origin :$1
+}
+
+function groute() {
+  rake routes | grep $1
+}
+
+function work_in_progress() {
+  if git rev-parse --git-dir > /dev/null 2>&1; then
+    if $(git log -n 1 | grep -q -c wip); then
+      echo "{WIP} "
+    fi
+  fi
+}
+
+_not_inside_tmux() { [[ -z "$TMUX" ]] }
+
+ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    tat
+  fi
+}
+
+tk() {
+  tmux kill-session -t $1
+}
+
+ta() {
+  tmux a -t $1
+}
+
+dt() {
+  touch $HOME/.tmp/USE_DARK_THEME; reload
+  echo "Colors changed, enjoy the dark colors"
+}
+
+lt() {
+  if [[ -a $HOME/.tmp/USE_DARK_THEME ]]; then
+    rm $HOME/.tmp/USE_DARK_THEME; reload
+    echo "Colors changed, don't forget to open a new terminal window for this to take effect"
+  else
+    echo "Already on light theme, nothing left for me todo!"
+  fi
+}
+
+git_push() {
+  local stderr=$(\git "$@" 2> >(tee /dev/stderr | head -n 1))
+  local current_branch=`git rev-parse --abbrev-ref HEAD`
+  local error="fatal: The current branch $current_branch has no upstream branch."
+
+  if [ "$stderr" == "$error" ]; then
+    echo "↝ git push --set-upstream origin $current_branch"
+    git push --set-upstream origin $current_branch
+  fi
+}
+
+# create the pane with irssi's nicklist
+function irssi_nickpane() {
+    tmux renamew irssi                                              # name the window
+    tmux -q setw main-pane-width $(( $(tput cols) - 21))            # set the main pane width to the total width-20
+    tmux splitw -v "cat ~/.irssi/nicklistfifo"                      # create the window and begin reading the fifo
+    tmux -q selectl main-vertical                                   # assign the layout
+    tmux selectw -t irssi                                           # select window 'irssi'
+    tmux selectp -t 0                                               # select pane 0
+}
+
+
+# irssi wrapper
+function irc() {
+    irc_session=$(tmux lsw -a | grep irssi | awk '{print $1}' | rev | cut -c 2- | rev);
+    if [[ -n "$irc_session" ]]; then
+      $(tmux move-window -d -s $irc_session);
+      echo "Sure";
+    else
+      irssi_nickpane
+      $(which irssi)                                                  # launch irssi
+    fi
+}
+
+# repair running irssi's nicklist pane
+function irssi_repair() {
+    tmux selectw -t irssi
+    tmux selectp -t 0
+    tmux killp -a                                                   # kill all panes
+    irssi_nickpane
+}
+
+function lsport() {
+  lsof -i TCP:$1
+}
+
+function killport() {
+  lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9
+}
+
+function sshkey() {
+  cat $HOME/.ssh/id_rsa.pub | pbcopy
+}
+
+function reloadbox() {
+  if [[ $# > 0 ]]; then
+    vagrant destroy -f $1 && vagrant up $1
+  else
+    vagrant destroy -f && vagrant up
+  fi
+}
+
+function _not_inside_tmux() {
+  [[ -z "$TMUX" ]]
+}
+
+function ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    tat
+  fi
+}

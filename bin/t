@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ -x "$(which runtest)" ] ; then
+  runtest
+elif [ -x "$(which runtests)" ] ; then
+  runtests
+else
+  if [ -x "$(which rubocop)" ] ; then
+    rubocop
+  fi
+
+  rake
+fi

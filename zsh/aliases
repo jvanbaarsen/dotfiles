@@ -1,0 +1,86 @@
+alias ea='v ~/.zsh/aliases'
+alias ef='v ~/.zsh/functions'
+alias ev='v ~/.vimrc'
+alias ez='v ~/.zshrc'
+alias dot='cd ~/dotfiles'
+alias reload='source ~/.zshrc'
+alias notes='terminal_velocity'
+alias tools='v ~/Dropbox/notes/tool-sharpening.txt'
+alias ls='ls -lrthG'
+alias tophistory='history | awk '"'"'{a[$2]++}END{for(i in a){print a[i] " " i}}'"'"' | sort -rn | head -n 20'
+alias typeless='history | tail -n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
+alias s='screen'
+alias be='bundle exec'
+alias h='~/'
+alias bi='bundle install -j 8'
+alias codereview='v ~/Dropbox/notes/code-review-checklist.txt'
+alias v='vim'
+alias create_ubuntu='vagrant init ubuntu/trusty64'
+alias docker_kill_all='docker kill $(docker ps -q)'
+alias pow='echo 3000 > ~/.pow/`basename $PWD`'
+alias gl='dev gitlab-development-kit/gitlab'
+alias kpas='sudo kill $(sudo lsof -t -i:3000)'
+alias z='tmux resize-pane -Z'
+alias tl='tmux list-sessions'
+alias tls='tmux ls'
+alias tks='tmux kill-session'
+alias trs='tmux rename-session'
+alias tas='tmux a'
+alias tds='tmux detach-client'
+alias tgl='ta gitlab-development-kit'
+alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
+alias dinit='eval "$(docker-machine env default)"'
+alias genssl='openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr'
+alias chost='sudo v /etc/hosts'
+alias feedback='v ~/Dropbox/notes/feedback.md'
+alias cov='open coverage/index.html'
+alias hw='heroku accounts:set work'
+alias hp='heroku accounts:set personal'
+alias wpd='bin/webpack-dev-server'
+alias hl='heroku local -p 3000'
+alias hlr='heroku local:run'
+alias dr='docker-compose run --rm web'
+alias mkdir="mkdir -p"
+
+alias rr='rake'
+
+# Git stuff
+alias gp='g push'
+alias gb='g checkout '
+alias gdf='g diff'
+alias gplr='g pull --rebase'
+alias gpl='g pull'
+alias gc='g commit --verbose'
+alias gsc='rake && ru && gc'
+alias gls='g lg'
+alias gaa='g add --all'
+alias gbc='gb --track -b'
+alias gnuke='git-nuke'
+alias squash='git rebase -i master'
+alias grc='git rebase --continue'
+alias grmerged='git-sweep'
+alias grrebased='git branch -vv | grep -v "origin/" | awk '{print $1}' | xargs git branch -D'
+alias gpr='git pull-request'
+alias gfpr='!f() { git fetch origin refs/pull/$1/head:pr/$1; } ; f'
+
+# Override the ZSH git plugin gwip (its bugged)
+unalias gwip
+alias gwip='git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m "--wip--"'
+
+# Ruby/Rails Specific aliases
+alias remi='be rake db:migrate && be rake db:migrate RAILS_ENV=test'
+alias rero='be rake db:rollback && be rake db:rollback RAILS_ENV=test'
+alias fs='foreman start'
+alias ru='rubocop'
+alias rc='rails console'
+
+# Disable some auto correct features
+alias rspec='nocorrect rspec'
+alias cb='nocorrect cb'
+alias be='nocorrect bundle exec'
+
+unalias g
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
