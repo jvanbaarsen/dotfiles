@@ -2,6 +2,7 @@ cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
 tap "homebrew/core"
+tap "homebrew/services"
 
 brew "ack"
 brew "ctags"
@@ -21,6 +22,8 @@ brew "tmate"
 brew "zsh"
 brew "zsh-syntax-highlighting"
 brew "direnv"
+brew "redis", restart_service: true
+brew "postgresql", restart_service: true
 
 cask "tableplus"
 cask "sip"
@@ -41,5 +44,6 @@ cask "divvy"
 cask "basecamp"
 cask "harvest"
 cask "gpg-suite"
+cask "notion"
 
 mas "todoist", id: 585829637
