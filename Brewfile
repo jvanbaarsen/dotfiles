@@ -48,5 +48,9 @@ cask "gpg-suite"
 cask "notion"
 cask "aerial"
 cask "whatsapp"
+cask "textual"
+cask "the-unarchiver"
+cask "iterm2"
 
 mas "todoist", id: 585829637
+mas "medis", id: 1063631769

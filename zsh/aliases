@@ -1,5 +1,5 @@
-alias ea='v ~/.zsh/aliases'
-alias ef='v ~/.zsh/functions'
+alias ea='v ~/zsh/aliases'
+alias ef='v ~/zsh/functions'
 alias ev='v ~/.vimrc'
 alias ez='v ~/.zshrc'
 alias dot='cd ~/dotfiles'

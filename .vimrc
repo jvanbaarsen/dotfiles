@@ -354,7 +354,7 @@ else
   " colorscheme base16-railscasts
   colorscheme base16-spacemacs
 endif
-" colorscheme dim
+colorscheme dim
 
 " Mustache stuff
 let g:mustache_abbreviations = 1

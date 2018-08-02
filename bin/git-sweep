@@ -25,11 +25,20 @@ echo "The following branches are still on your system, let's go over them:"
 
 echo $BRANCHES
 
-for branch in $BRANCHES; do
-  read -p "Do you wish to remove '$branch' (y/n)?" yn
-  case $yn in
-    [Yy]* ) git branch -D $branch; continue;;
-    [Nn]* ) continue;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
+read -p "Do you wish to remove *all* of them, except master and production (y/n)?" -n 1 -r
+echo
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  for branch in $BRANCHES; do
+    git branch -D $branch;
+  done
+else
+  for branch in $BRANCHES; do
+    read -p "Do you wish to remove '$branch' (y/n)?" yn
+    case $yn in
+      [Yy]* ) git branch -D $branch; continue;;
+      [Nn]* ) continue;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+fi
