@@ -34,8 +34,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   done
 else
   for branch in $BRANCHES; do
-    read -p "Do you wish to remove '$branch' (y/n)?" yn
-    case $yn in
+    read -p "Do you wish to remove '$branch' (y/n)?" -n 1 -r
+    case $REPLY in
       [Yy]* ) git branch -D $branch; continue;;
       [Nn]* ) continue;;
       * ) echo "Please answer yes or no.";;
