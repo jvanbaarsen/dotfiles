@@ -40,6 +40,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'christoomey/vim-run-interactive'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pbrisbin/vim-mkdir'
 
 " Vim 2 Gist
@@ -454,40 +455,6 @@ if ! has("gui_running")
         au InsertLeave * set timeoutlen=1000
     augroup END
 endif
-
-if g:use_light_colors
-  highlight ColorColumn  ctermbg=255
-  highlight StatusLineNC ctermbg=238 ctermfg=0
-  highlight StatusLine   ctermfg=240 guibg=#ffffff
-  highlight CursorLine   cterm=NONE ctermbg=255
-  highlight Visual       ctermbg=3   ctermfg=0
-  if version >= 700
-    au InsertEnter * hi StatusLine ctermfg=2 guibg=#ffffff
-    au InsertLeave * hi StatusLine guibg=#ffffff ctermfg=240
-  endif
-else
-  " set up some custom colors
-  highlight clear SignColumn
-  highlight VertSplit    ctermbg=236
-  highlight ColorColumn  ctermbg=237
-  " highlight LineNr       ctermbg=236 ctermfg=240
-  highlight CursorLineNr ctermbg=236 ctermfg=240
-  highlight CursorLine   ctermbg=236
-  " highlight StatusLineNC ctermbg=238 ctermfg=0
-  " highlight StatusLine   ctermbg=240 ctermfg=12
-  highlight IncSearch    ctermbg=3   ctermfg=1
-  " highlight Search       ctermbg=1   ctermfg=3
-  highlight Visual       ctermbg=3   ctermfg=0
-  highlight Pmenu        ctermbg=240 ctermfg=12
-  highlight PmenuSel     ctermbg=3   ctermfg=1
-  highlight SpellBad     ctermbg=0   ctermfg=1
-  " highlight the status bar when in insert mode
-  if version >= 700
-    au InsertEnter * hi StatusLine ctermfg=235 ctermbg=2
-    au InsertLeave * hi StatusLine ctermbg=240 ctermfg=12
-  endif
-endif
-
 
 " highlight trailing spaces in annoying red
 highlight ExtraWhitespace ctermbg=1 guibg=red

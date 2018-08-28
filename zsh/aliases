@@ -16,7 +16,6 @@ alias bi='bundle install -j 8'
 alias codereview='v ~/Dropbox/notes/code-review-checklist.txt'
 alias v='vim'
 alias create_ubuntu='vagrant init ubuntu/trusty64'
-alias docker_kill_all='docker kill $(docker ps -q)'
 alias pow='echo 3000 > ~/.pow/`basename $PWD`'
 alias gl='dev gitlab-development-kit/gitlab'
 alias kpas='sudo kill $(sudo lsof -t -i:3000)'
@@ -39,8 +38,11 @@ alias hp='heroku accounts:set personal'
 alias wpd='bin/webpack-dev-server'
 alias hl='heroku local -p 3000'
 alias hlr='heroku local:run'
-alias dr='docker-compose run --rm web'
 alias mkdir="mkdir -p"
+
+alias docker_kill_all='docker kill $(docker ps -q)'
+alias dr='docker-compose run --rm'
+alias dc='docker-compose'
 
 alias rr='rake'
 
@@ -73,6 +75,7 @@ alias rero='be rake db:rollback && be rake db:rollback RAILS_ENV=test'
 alias fs='foreman start'
 alias ru='rubocop'
 alias rc='rails console'
+alias rrg='rails routes | grep'
 
 # Disable some auto correct features
 alias rspec='nocorrect rspec'

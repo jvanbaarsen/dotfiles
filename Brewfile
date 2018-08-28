@@ -25,6 +25,8 @@ brew "direnv"
 brew "redis", restart_service: true
 brew "postgresql", restart_service: true
 brew "the_silver_searcher"
+brew "imagemagick"
+brew "cmake"
 
 cask "tableplus"
 cask "sip"
@@ -52,6 +54,8 @@ cask "textual"
 cask "the-unarchiver"
 cask "iterm2"
 cask "docker"
+cask "ngrok"
+cask "gifox"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
