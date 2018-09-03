@@ -26,13 +26,10 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 
 " Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Misc plugins
-Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ngmy/vim-rubocop'
@@ -50,9 +47,9 @@ Plugin 'mattn/gist-vim'
 " Go plugins
 Plugin 'fatih/vim-go'
 
-" EmberJS stuff
-Plugin 'dsawardekar/ember.vim'
-Plugin 'mustache/vim-mustache-handlebars'
+" Javascript
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 " Color Scheme
 Plugin 'chriskempson/base16-vim'
@@ -62,9 +59,6 @@ Plugin 'jeffkreeftmeijer/vim-dim'
 
 " Disable arrow keys and count the mis-use of it :-)
 Plugin 'mrmargolis/dogmatic.vim'
-
-" Javascript support
-Plugin 'pangloss/vim-javascript'
 
 " Reek - Ruby smell detection
 Plugin 'rainerborene/vim-reek'
@@ -107,6 +101,9 @@ Plugin 'mhinz/vim-mix-format'
 
 " Ruby run support
 Plugin 'stjernstrom/vim-ruby-run'
+
+" Autocomplete support
+Plugin 'lifepillar/vim-mucomplete'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -431,8 +428,8 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git -g ""'
-  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$\|node_modules/'
+  " let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git -g ""'
+  " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$\|node_modules/'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
@@ -479,4 +476,23 @@ function! ListGems(A,L,P)
 endfun
 
 " Shortcut mapping.
-nmap <leader>o :BundleOpen 
+nmap <leader>o :BundleOpen
+
+" MuComplete
+set wildmenu " Enhanced command line completion.
+set wildmode=list:longest " Complete files like a shell.
+set shortmess+=c " Turn off completion messages
+set completeopt=menu,menuone,preview,noinsert,noselect
+set complete=.,w,b,u,t
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#chains = { 'default': ['c-n', 'omni', 'uspl', 'path'] }
+let g:mucomplete#no_mappings = 1
+let g:mucomplete#spel#max = 10
+imap <tab> <plug>(MUcompleteFwd)
+imap <s-tab> <plug>(MUcompleteBwd)
+
+" Snippets config
+" Bound to C-J/K because TAB is used by autocomplete.
+let g:UltiSnipsExpandTrigger="<C-J>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
+let g:UltiSnipsJumpBackwardTrigger="<C-K>"
