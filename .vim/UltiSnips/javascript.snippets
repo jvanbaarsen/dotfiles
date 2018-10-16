@@ -1,0 +1,20 @@
+priority 10
+extends html, react, jsx
+
+snippet im "import xyz from 'xyz'"
+import ${1} from '${2:$1}'
+endsnippet
+
+snippet conl "Console.log($1)"
+console.log(${0})
+endsnippet
+
+snippet ff "func = () => {}"
+${1:name} = (${2}) => {
+	${3}
+}
+endsnippet
+
+snippet fff "() => {}" i
+(${1}) => {${2}}
+endsnippet

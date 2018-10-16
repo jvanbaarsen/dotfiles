@@ -16,6 +16,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
+Plugin 'suy/vim-context-commentstring'
 " Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
@@ -24,10 +25,11 @@ Plugin 'tpope/vim-tbone'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
+Plugin 'jiangmiao/auto-pairs'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+" Plugin 'honza/vim-snippets'
 
 " Misc plugins
 Plugin 'scrooloose/nerdtree'
@@ -36,8 +38,8 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
-Plugin 'christoomey/vim-run-interactive'
-Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'christoomey/vim-run-interactive'
+" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pbrisbin/vim-mkdir'
 
 " Vim 2 Gist
@@ -137,7 +139,7 @@ map <Leader>todo :sp ~/Dropbox/notes/todo.txt<CR>
 map <Leader>ptodo :sp ~/Dropbox/notes/private-todo.txt<CR>
 map <Leader>ll <esc>i=============================================<cr><esc>
 map <Leader>reload :source $MYVIMRC<CR>
-map <Leader>sn :sp ~/.vim/bundle/vim-snippets/snippets<CR>
+map <Leader>sn :sp ~/.vim/UltiSnips<CR>
 map <leader>h :nohl<cr>
 map <silent><leader>b :noh<cr>
 " map <leader>l :w<cr>:call RunCurrentLineInTest()<CR>
@@ -182,9 +184,9 @@ autocmd FileType qf setlocal wrap linebreak
 command! Q q  " Allow quiting with :Q and :q
 
 " Vim TMux Runner config
-let g:VtrClearBeforeSend = 1
-let g:VtrOrientation = "h"
-let g:VtrPercentage = 20
+" let g:VtrClearBeforeSend = 1
+" let g:VtrOrientation = "h"
+" let g:VtrPercentage = 20
 
 " Vim Gist settings
 let g:gist_post_private = 1
@@ -263,7 +265,7 @@ syntax on
 filetype plugin indent on
 hi Search guibg=darkgrey ctermbg=darkgrey
 set nocursorline
-set visualbell
+set novb
 set noerrorbells
 set smartcase
 set ignorecase
@@ -410,7 +412,8 @@ map <Leader>n :call RenameFile()<cr>
 " AUTOCOMMAND STUFF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
-  au VimLeave * VtrKillRunner
+  " Disable Tmux related things for now
+  " au VimLeave * VtrKillRunner
   augroup vimrcEx
     au!
     autocmd BufReadPost *
@@ -428,8 +431,8 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  " let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git -g ""'
-  " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$\|node_modules/'
+  let g:ctrlp_user_command = 'ag %s -l --hidden --ignore .git -g ""'
+  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$\|node_modules/'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
@@ -467,7 +470,7 @@ imap <F5> <ESC>:setlocal spell! spelllang=en_us<cr>
 
 " Split current tmux window, running `bundle open` on the 
 " argument-specified Gem name. Auto-completes from Gemfile.lock.
-command! -nargs=* -complete=custom,ListGems BundleOpen silent execute "!tmux splitw 'bundle open <args>'"
+" command! -nargs=* -complete=custom,ListGems BundleOpen silent execute "!tmux splitw 'bundle open <args>'"
 
 " The function used to produce the autocomplete results.
 function! ListGems(A,L,P)
@@ -485,7 +488,7 @@ set shortmess+=c " Turn off completion messages
 set completeopt=menu,menuone,preview,noinsert,noselect
 set complete=.,w,b,u,t
 let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#chains = { 'default': ['c-n', 'omni', 'uspl', 'path'] }
+let g:mucomplete#chains = { 'default': ['ulti', 'c-n', 'omni', 'uspl', 'path'] }
 let g:mucomplete#no_mappings = 1
 let g:mucomplete#spel#max = 10
 imap <tab> <plug>(MUcompleteFwd)

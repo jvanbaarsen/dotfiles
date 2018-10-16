@@ -52,6 +52,9 @@ source $HOME/dotfiles/zsh/prompt
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Always work in a tmux session if tmux is installed
-ensure_tmux_is_running
+# ensure_tmux_is_running
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export BAT_THEME="Monokai Extended Light"

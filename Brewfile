@@ -27,6 +27,7 @@ brew "postgresql", restart_service: true
 brew "the_silver_searcher"
 brew "imagemagick"
 brew "cmake"
+brew "bat"
 
 cask "tableplus"
 cask "sip"
