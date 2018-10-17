@@ -1,0 +1,18 @@
+--exclude=*.json
+--exclude=*.lock
+--exclude=*.min.js
+--exclude=*.yml
+--exclude=.git
+--exclude=.yardoc
+--exclude=build
+--exclude=log
+--exclude=node_modules
+--exclude=tmp
+--exclude=vendor
+--exclude=public
+--exclude=coverage
+--languages=-html
+--languages=+ruby
+--fields=+i+a+S+n
+
+--regex-ruby=/(^|;)[ \t]*(class|module)[ \t]+([A-Z][[:alnum:]_]+(::[A-Z][[:alnum:]_]+)+)/\3/c,class,constant/

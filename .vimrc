@@ -46,21 +46,12 @@ Plugin 'pbrisbin/vim-mkdir'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
-" Go plugins
-Plugin 'fatih/vim-go'
-
 " Javascript
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 
 " Color Scheme
-Plugin 'chriskempson/base16-vim'
-Plugin 'endel/vim-github-colorscheme'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'jeffkreeftmeijer/vim-dim'
-
-" Disable arrow keys and count the mis-use of it :-)
-Plugin 'mrmargolis/dogmatic.vim'
 
 " Reek - Ruby smell detection
 Plugin 'rainerborene/vim-reek'
@@ -70,15 +61,6 @@ Plugin 'ecomba/vim-ruby-refactoring'
 
 " Git Gutter - Show git status in the gutter
 Plugin 'airblade/vim-gitgutter'
-
-" " Slim syntax highlighting
-Plugin 'slim-template/vim-slim.git'
-
-" Dash search
-Plugin 'rizzatti/dash.vim'
-
-" notes
-Plugin 'jodosha/vim-devnotes'
 
 " Test runners
 Plugin 'janko-m/vim-test'
@@ -101,11 +83,11 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'mhinz/vim-mix-format'
 
-" Ruby run support
-Plugin 'stjernstrom/vim-ruby-run'
-
 " Autocomplete support
 Plugin 'lifepillar/vim-mucomplete'
+
+" Vim for writing
+Plugin 'junegunn/goyo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -486,7 +468,7 @@ set wildmenu " Enhanced command line completion.
 set wildmode=list:longest " Complete files like a shell.
 set shortmess+=c " Turn off completion messages
 set completeopt=menu,menuone,preview,noinsert,noselect
-set complete=.,w,b,u,t
+set complete=.,w,b,u,i
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#chains = { 'default': ['ulti', 'c-n', 'omni', 'uspl', 'path'] }
 let g:mucomplete#no_mappings = 1

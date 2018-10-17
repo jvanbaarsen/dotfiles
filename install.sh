@@ -34,6 +34,7 @@ ln -nfs "$(pwd)/.git_template" "$HOME/.git_template"
 ln -nfs "$(pwd)/.gitconfig" "$HOME/.gitconfig"
 ln -nfs "$(pwd)/gitignore" "$HOME/.gitignore"
 ln -nfs "$(pwd)/.railsrc" "$HOME/.railsrc"
+ln -nfs "$(pwd)/config.ctags" "$HOME/config.ctags"
 
 echo "- Installing Vim plugin manager"
 if  [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then

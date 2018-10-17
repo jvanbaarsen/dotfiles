@@ -20,7 +20,7 @@
   meta = yellow
 [core]
   excludesfile = ~/.gitignore
-  editor = /usr/bin/vim
+  editor = /usr/local/bin/nvim
 [help]
   autocorrect = 1
 [push]
