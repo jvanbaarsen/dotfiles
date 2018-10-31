@@ -1,0 +1,19 @@
+snippet it "It"
+it "${1:does something}" do
+	${2}
+end
+endsnippet
+
+snippet desc "Describe"
+describe "${1:Describe}" do
+	${2}
+end
+endsnippet
+
+snippet spec "Empty spec file"
+require "rails_helper"
+
+RSpec.describe ${1:Object} do
+	${2}
+end
+endsnippet

@@ -468,7 +468,7 @@ set wildmenu " Enhanced command line completion.
 set wildmode=list:longest " Complete files like a shell.
 set shortmess+=c " Turn off completion messages
 set completeopt=menu,menuone,preview,noinsert,noselect
-set complete=.,w,b,u,i
+set complete=.,w,b,u,t
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#chains = { 'default': ['ulti', 'c-n', 'omni', 'uspl', 'path'] }
 let g:mucomplete#no_mappings = 1
