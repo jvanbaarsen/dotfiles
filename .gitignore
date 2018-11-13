@@ -3,3 +3,4 @@
 .vim/bundle/Vundle.vim
 .vim/bundle/ctrlp.vim
 .vim/spell
+.vim/plugged
