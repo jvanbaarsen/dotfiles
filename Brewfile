@@ -51,6 +51,7 @@ cask "docker"
 cask "ngrok"
 cask "gifox"
 cask "firefox"
+cask "spectacle"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
