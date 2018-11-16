@@ -35,12 +35,10 @@ ln -nfs "$(pwd)/.gitconfig" "$HOME/.gitconfig"
 ln -nfs "$(pwd)/gitignore" "$HOME/.gitignore"
 ln -nfs "$(pwd)/.railsrc" "$HOME/.railsrc"
 ln -nfs "$(pwd)/config.ctags" "$HOME/config.ctags"
+ln -nfs "$(pwd)/.hammerspoon" "$HOME/.hammerspoon"
 
-echo "- Installing Vim plugin manager"
-if  [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-else
-  echo "...Already installed, skipping"
-fi
+echo "- Fetching git submodules"
+git submodule init
+git submodule update --recursive
 
 echo "All done, don't forget to restart your shell"
