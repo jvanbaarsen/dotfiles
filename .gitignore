@@ -4,3 +4,5 @@
 .vim/bundle/ctrlp.vim
 .vim/spell
 .vim/plugged
+tags.lock
+tags.tmp

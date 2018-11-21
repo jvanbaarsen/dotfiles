@@ -29,5 +29,5 @@
   user = jvanbaarsen
 [fetch]
   prune = true
-[init]
-  templatedir = ~/.git_template
+; [init]
+;   templatedir = ~/.git_template

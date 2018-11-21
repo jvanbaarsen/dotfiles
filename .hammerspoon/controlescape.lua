@@ -20,7 +20,7 @@ function obj:init()
   self.lastModifiers = {}
 
   -- If `control` is held for this long, don't send `escape`
-  local CANCEL_DELAY_SECONDS = 0.150
+  local CANCEL_DELAY_SECONDS = 0.250
   self.controlKeyTimer = hs.timer.delayed.new(CANCEL_DELAY_SECONDS, function()
     self.sendEscape = false
   end)

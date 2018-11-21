@@ -1,3 +1,4 @@
+set nocompatible
 set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
@@ -19,7 +20,6 @@ set relativenumber
 set number
 set autoread
 set expandtab
-set tags+=.git/tags
 set autowrite
 set wildignore+=*.jpg,*.psd,*.gif,tmp/**,*.png,Export/**
 set wildignore+=tags,Assets/images/**,Assets/sounds/**,build/**,.sass-cache/**
@@ -30,3 +30,4 @@ set breakindent
 let &showbreak="↳ "
 set scrolloff=5
 set lazyredraw
+set novb

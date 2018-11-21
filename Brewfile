@@ -31,7 +31,6 @@ cask "sip"
 cask "dropbox"
 cask "graphql-playground"
 cask "google-chrome"
-cask "1password"
 cask "alfred"
 cask "dash"
 cask "spotify"
@@ -56,3 +55,4 @@ cask "hammerspoon"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
+mas "1password", id: 1333542190
