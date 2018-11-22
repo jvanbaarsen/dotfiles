@@ -16,7 +16,9 @@ Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'lifepillar/vim-mucomplete'
+Plug 'sirver/ultisnips'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 runtime! config/**/*.vim
