@@ -21,7 +21,6 @@ echo "- Creating needed folders"
 mkdir -p ~/Development
 mkdir -p ~/.tmp
 mkdir -p ~/.config
-mkdir -p ~/.ctags.d
 mkdir -p ~/.hammerspoon
 
 echo "- Linking files"
@@ -36,7 +35,7 @@ ln -nfs "$(pwd)/.git_template" "$HOME/.git_template"
 ln -nfs "$(pwd)/.gitconfig" "$HOME/.gitconfig"
 ln -nfs "$(pwd)/gitignore" "$HOME/.gitignore"
 ln -nfs "$(pwd)/.railsrc" "$HOME/.railsrc"
-ln -nfs "$(pwd)/.ctags.d/config.ctags" "$HOME/.ctags.d/config.ctags"
+ln -nfs "$(pwd)/.ctags" "$HOME/.ctags"
 ln -nfs "$(pwd)/.hammerspoon" "$HOME/.hammerspoon"
 
 echo "- Fetching git submodules"

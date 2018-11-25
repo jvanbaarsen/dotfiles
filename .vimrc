@@ -14,11 +14,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sirver/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-bundler'
 
 call plug#end()
 runtime! config/**/*.vim

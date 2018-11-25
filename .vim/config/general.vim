@@ -24,6 +24,7 @@ set autowrite
 set wildignore+=*.jpg,*.psd,*.gif,tmp/**,*.png,Export/**
 set wildignore+=tags,Assets/images/**,Assets/sounds/**,build/**,.sass-cache/**
 set backspace=indent,eol,start
+set tags+=.git/tags
 set wrap
 set linebreak
 set breakindent

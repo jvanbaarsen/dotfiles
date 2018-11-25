@@ -17,3 +17,24 @@ RSpec.describe ${1:Object} do
 	${2}
 end
 endsnippet
+
+snippet systemspec "Empty system spec"
+require "rails_helper"
+
+RSpec.describe "${1:SpecDescription}", type: :system do
+	${2}
+end
+endsnippet
+
+snippet modelspec "Empty model spec"
+require "rails_helper"
+
+RSpec.describe ${1:Object}, type: :model do
+	${2}
+end
+endsnippet
+
+snippet oscreen "Take and open screenshot"
+save_and_open_screenshot
+endsnippet
+

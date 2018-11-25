@@ -3,9 +3,10 @@ cask_args appdir: "/Applications"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "universal-ctags/universal-ctags"
 
 brew "ack"
-brew "ctags"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "docker"
 brew "docker-machine"
 brew "elixir"
@@ -25,6 +26,7 @@ brew "the_silver_searcher"
 brew "imagemagick"
 brew "cmake"
 brew "bat"
+brew "tree"
 
 cask "tableplus"
 cask "sip"
@@ -53,7 +55,9 @@ cask "firefox"
 cask "spectacle"
 cask "hammerspoon"
 cask "figma"
+cask "tunnelblick"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
 mas "1password", id: 1333542190
+mas "markoff", id: 1084713122
