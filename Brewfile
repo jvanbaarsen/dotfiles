@@ -61,3 +61,4 @@ mas "todoist", id: 585829637
 mas "medis", id: 1063631769
 mas "1password", id: 1333542190
 mas "markoff", id: 1084713122
+mas "daisydisk", id: 411643860

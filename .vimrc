@@ -23,4 +23,5 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
 
 call plug#end()
+
 runtime! config/**/*.vim
