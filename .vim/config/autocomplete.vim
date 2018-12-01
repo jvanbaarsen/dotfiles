@@ -10,7 +10,7 @@ set complete=.,w,b,u,i
 
 " mucomplete
 let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#chains = { 'default': ['ulti', 'c-n', 'omni', 'uspl', 'path'] }
+let g:mucomplete#chains = { 'default': ['ulti', 'uspl'] }
 let g:mucomplete#no_mappings = 1
 let g:mucomplete#spel#max = 10
 

@@ -56,6 +56,7 @@ cask "spectacle"
 cask "hammerspoon"
 cask "figma"
 cask "tunnelblick"
+cask "zoomus"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
