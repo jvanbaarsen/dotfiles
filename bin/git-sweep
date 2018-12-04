@@ -5,7 +5,7 @@ git fetch
 git remote prune origin
 git branch --merged master | grep -v 'master$' | xargs git branch -d
 
-REMOVABLE=`git branch -r --merged master | sed 's/ *origin\///' | grep -v 'master$' | grep -v 'production$'`
+REMOVABLE=`git branch -r --merged master | sed 's/ *origin\///' | grep -v 'master$' | grep -v 'production$'` | grep -v 'develop$'
 
 if [[ "$REMOVABLE" ]]; then
   echo "The following remote branches are fully merged and will be removed:"
@@ -20,7 +20,7 @@ if [[ "$REMOVABLE" ]]; then
   fi
 fi
 
-BRANCHES=`git branch | grep -v 'master$' | grep -v 'production$'`
+BRANCHES=`git branch | grep -v 'master$' | grep -v 'production$'` | grep -v 'develop$'
 echo "The following branches are still on your system, let's go over them:"
 
 echo $BRANCHES

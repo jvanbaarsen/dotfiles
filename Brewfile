@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "universal-ctags/universal-ctags"
+tap "joshuaclayton/formulae"
 
 brew "ack"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
@@ -27,7 +28,10 @@ brew "imagemagick"
 brew "cmake"
 brew "bat"
 brew "tree"
+brew "mongodb"
+brew "unused"
 
+cask "chromedriver"
 cask "tableplus"
 cask "sip"
 cask "dropbox"
@@ -50,7 +54,6 @@ cask "the-unarchiver"
 cask "iterm2"
 cask "docker"
 cask "ngrok"
-cask "gifox"
 cask "firefox"
 cask "spectacle"
 cask "hammerspoon"
@@ -63,3 +66,4 @@ mas "medis", id: 1063631769
 mas "1password", id: 1333542190
 mas "markoff", id: 1084713122
 mas "daisydisk", id: 411643860
+mas "gifox", id: 1082624744
