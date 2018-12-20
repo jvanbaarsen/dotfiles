@@ -21,6 +21,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-eunuch'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

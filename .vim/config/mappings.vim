@@ -28,3 +28,6 @@ nmap <silent> <leader>K :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+" Disable search Highlight with Enter
+nnoremap <cr> :noh<CR><CR>:<backspace>

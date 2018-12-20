@@ -30,6 +30,7 @@ brew "bat"
 brew "tree"
 brew "mongodb"
 brew "unused"
+brew "tmux"
 
 cask "chromedriver"
 cask "tableplus"

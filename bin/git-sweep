@@ -1,11 +1,18 @@
 #!/bin/bash
 
-git checkout master
+
+MAIN_BRANCH="master"
+if [ "$1" ]; then
+  MAIN_BRANCH=$1
+fi
+
+git checkout $MAIN_BRANCH
 git fetch
 git remote prune origin
-git branch --merged master | grep -v 'master$' | xargs git branch -d
+git branch --merged $MAIN_BRANCH | grep -v "$MAIN_BRANCH$" | xargs git branch -d
 
-REMOVABLE=`git branch -r --merged master | sed 's/ *origin\///' | grep -v 'master$' | grep -v 'production$'` | grep -v 'develop$'
+BRANCH_LIST_COMMAND="git branch -r --merged $MAIN_BRANCH | sed 's/ *origin\///' | grep -v 'master$' | grep -v 'production$' | grep -v 'develop$'"
+REMOVABLE="`eval ${BRANCH_LIST_COMMAND}`"
 
 if [[ "$REMOVABLE" ]]; then
   echo "The following remote branches are fully merged and will be removed:"
@@ -20,12 +27,12 @@ if [[ "$REMOVABLE" ]]; then
   fi
 fi
 
-BRANCHES=`git branch | grep -v 'master$' | grep -v 'production$'` | grep -v 'develop$'
+BRANCHES=`git branch | grep -v 'master$' | grep -v 'production$' | grep -v 'develop$'`
 echo "The following branches are still on your system, let's go over them:"
 
 echo $BRANCHES
 
-read -p "Do you wish to remove *all* of them, except master and production (y/n)?" -n 1 -r
+read -p "Do you wish to remove *all* of them, except master, develop and production (y/n)?" -n 1 -r
 echo
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then

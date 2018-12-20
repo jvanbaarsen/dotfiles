@@ -21,7 +21,6 @@ alias tks='tmux kill-session'
 alias trs='tmux rename-session'
 alias tas='tmux a'
 alias tds='tmux detach-client'
-alias tgl='ta gitlab-development-kit'
 alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
 alias dinit='eval "$(docker-machine env default)"'
 alias genssl='openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr'
@@ -43,7 +42,8 @@ alias rr='rake'
 
 # Git stuff
 alias gp='g push'
-alias gb='g checkout '
+alias gb='g checkout'
+alias gbl='g branch --sort=committerdate'
 alias gdf='g diff'
 alias gplr='g pull --rebase'
 alias gpl='g pull'
@@ -72,8 +72,10 @@ alias ru='rubocop'
 alias rc='rails console'
 alias rrg='rails routes | grep'
 
+# AppSignal related aliases
+alias glp='cd frontend/gulp; gulp watch'
+
 # Disable some auto correct features
-alias rspec='nocorrect rspec'
 alias cb='nocorrect cb'
 alias be='nocorrect bundle exec'
 

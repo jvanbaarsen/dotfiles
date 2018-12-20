@@ -37,6 +37,7 @@ ln -nfs "$(pwd)/gitignore" "$HOME/.gitignore"
 ln -nfs "$(pwd)/.railsrc" "$HOME/.railsrc"
 ln -nfs "$(pwd)/.ctags" "$HOME/.ctags"
 ln -nfs "$(pwd)/.hammerspoon" "$HOME/.hammerspoon"
+ln -nfs "$(pwd)/tmux.conf" "$HOME/tmux.conf"
 
 echo "- Fetching git submodules"
 git submodule init
