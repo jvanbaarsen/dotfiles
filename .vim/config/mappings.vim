@@ -6,7 +6,7 @@ map <Leader>sn :sp ~/.vim/UltiSnips<CR>
 map <Leader>h :nohl<cr>
 map <Leader>reload :source $MYVIMRC<CR>
 nnoremap <Leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
-map <Leader>r :NERDTreeToggle<CR>
+map <Leader>r :Vexplore .<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j

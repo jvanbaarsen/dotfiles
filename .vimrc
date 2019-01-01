@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -23,6 +23,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-eunuch'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-vinegar'
 
 call plug#end()
 

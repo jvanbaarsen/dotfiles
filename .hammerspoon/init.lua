@@ -1,1 +1,1 @@
-hs.loadSpoon('ControlEscape'):start()
+-- hs.loadSpoon('ControlEscape'):start()

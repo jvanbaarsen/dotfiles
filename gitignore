@@ -8,3 +8,4 @@ db/*.sqlite3
 project-notes.txt
 .devnotes
 .notags
+.unused.yml
