@@ -19,6 +19,17 @@ snippet fff "() => {}" i
 (${1}) => {${2}}
 endsnippet
 
+snippet shallow "Jest default shallow test file"
+import React from "React"
+import { shallow } from "enzyme"
+
+${1:SubjectUnderTest}
+
+describe("${2:description}", () => {
+	${3}
+})
+endsnippet
+
 snippet test "Jest Test case"
 test("${1:name}", () => {
 	${2}

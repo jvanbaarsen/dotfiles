@@ -34,6 +34,9 @@ alias hl='heroku local -p 3000'
 alias hlr='heroku local:run'
 alias mkdir="mkdir -p"
 
+# Note taking
+alias standup='v ~/Dropbox/notes/daily_standup.md'
+
 alias docker_kill_all='docker kill $(docker ps -q)'
 alias dr='docker-compose run --rm'
 alias dc='docker-compose'

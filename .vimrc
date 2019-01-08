@@ -24,6 +24,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-eunuch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
+Plug 'w0rp/ale'
 
 call plug#end()
 
