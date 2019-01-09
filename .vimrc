@@ -25,6 +25,9 @@ Plug 'tpope/vim-eunuch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
+Plug 'andymass/vim-matchup'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
 
 call plug#end()
 

@@ -31,6 +31,8 @@ brew "tree"
 brew "mongodb"
 brew "unused"
 brew "tmux"
+brew "tmate"
+brew "fzf"
 
 cask "chromedriver"
 cask "tableplus"
