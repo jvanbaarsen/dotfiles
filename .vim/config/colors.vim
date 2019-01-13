@@ -1,3 +1,4 @@
+colorscheme dim
 " highlight trailing spaces in annoying red
 highlight ExtraWhitespace ctermbg=1 guibg=red
 match ExtraWhitespace /\s\+$/
@@ -6,10 +7,19 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" Set linenr colors
-highlight LineNr ctermfg=grey ctermbg=NONE
+" Regulary check what OSXs color mode is.
+function! SetBackgroundMode(...)
+  let s:new_bg = "light"
+  let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
+  if s:mode ==? "dark"
+      let s:new_bg = "dark"
+  else
+      let s:new_bg = "light"
+  endif
 
-" Set color for 80 mark
-highlight ColorColumn ctermbg=black
-
-hi Search ctermfg=black ctermbg=yellow
+  if &background !=? s:new_bg
+      let &background = s:new_bg
+  endif
+endfunction
+call SetBackgroundMode()
+call timer_start(3000, "SetBackgroundMode", {"repeat": -1})

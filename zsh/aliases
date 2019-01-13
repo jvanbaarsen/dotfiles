@@ -45,8 +45,8 @@ alias rr='rake'
 
 # Git stuff
 alias gp='g push'
-alias gb='fbr'
-alias gbl='g branch --sort=committerdate'
+alias gb='g checkout'
+alias gbl='fbr'
 alias gdf='g diff'
 alias gplr='g pull --rebase'
 alias gpl='g pull'
