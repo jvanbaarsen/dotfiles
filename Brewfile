@@ -33,6 +33,7 @@ brew "unused"
 brew "tmux"
 brew "tmate"
 brew "fzf"
+brew "reattach-to-user-namespace"
 
 cask "chromedriver"
 cask "tableplus"

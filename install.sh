@@ -25,7 +25,7 @@ mkdir -p ~/.hammerspoon
 
 echo "- Linking files"
 ln -nfs "$(pwd)/.zshrc" "$HOME/.zshrc"
-ln -nfs "$(pwd)/.tmux.conf" "$HOME/.tmux.conf"
+ln -nfs "$(pwd)/tmux.conf" "$HOME/.tmux.conf"
 ln -nfs "$(pwd)/.vimrc" "$HOME/.vimrc"
 ln -nfs "$(pwd)/.vim" "$HOME/.vim"
 ln -nfs "$(pwd)/.vim" "$HOME/.config/nvim"
@@ -37,7 +37,6 @@ ln -nfs "$(pwd)/gitignore" "$HOME/.gitignore"
 ln -nfs "$(pwd)/.railsrc" "$HOME/.railsrc"
 ln -nfs "$(pwd)/.ctags" "$HOME/.ctags"
 ln -nfs "$(pwd)/.hammerspoon" "$HOME/.hammerspoon"
-ln -nfs "$(pwd)/tmux.conf" "$HOME/tmux.conf"
 
 echo "- Fetching git submodules"
 git submodule init
