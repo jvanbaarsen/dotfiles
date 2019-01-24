@@ -3,6 +3,7 @@ cask_args appdir: "/Applications"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "homebrew/cask-fonts"
 tap "universal-ctags/universal-ctags"
 tap "joshuaclayton/formulae"
 
@@ -64,6 +65,7 @@ cask "hammerspoon"
 cask "figma"
 cask "tunnelblick"
 cask "zoomus"
+cask "font-source-code-pro"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769

@@ -12,7 +12,7 @@ Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSu
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
-" Plug 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sirver/ultisnips'
@@ -30,7 +30,11 @@ Plug 'andymass/vim-matchup'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
 Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'honza/vim-snippets'
+Plug 'slashmili/alchemist.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
+Plug 'vim-airline/vim-airline-themes'
 runtime! config/**/*.vim

@@ -19,7 +19,9 @@ function! SetBackgroundMode(...)
 
   if &background !=? s:new_bg
       let &background = s:new_bg
+      AirlineTheme appsignal
   endif
 endfunction
+
 call SetBackgroundMode()
 call timer_start(3000, "SetBackgroundMode", {"repeat": -1})

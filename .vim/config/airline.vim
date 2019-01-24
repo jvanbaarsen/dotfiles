@@ -7,3 +7,4 @@ let g:airline#extensions#ale#enabled = 1
 
 let g:airline_section_y =[]
 let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr', ' :%3v'])
+let g:airline_theme='appsignal'

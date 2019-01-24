@@ -18,6 +18,7 @@ map Q <Nop>
 map - <Nop>
 
 command! W w
+command! Q q
 
 nnoremap <leader><leader> <c-^>
 

@@ -16,7 +16,12 @@ let g:ale_linters={
 \  'rust': ['cargo'],
 \  'markdown': ['vale'],
 \}
+let g:ale_fixers={
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'elixir': ['mix_format'],
+\}
 let g:ale_ruby_rubocop_executable='bundle'
 let g:ale_javascript_eslint_executable='yarn'
 let g:ale_set_balloons=0
 let g:ale_set_highlights = 0
+let g:ale_fix_on_save = 1
