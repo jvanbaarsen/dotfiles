@@ -8,7 +8,7 @@ set smartcase
 set ignorecase
 set hidden
 set ruler
-set synmaxcol=128
+set synmaxcol=0
 set noswapfile
 set splitbelow
 set splitright
