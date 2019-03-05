@@ -12,6 +12,7 @@ function! SetBackgroundMode(...)
   let s:new_bg = "light"
   let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
   if s:mode ==? "dark"
+    echo "Dark"
       let s:new_bg = "dark"
   else
       let s:new_bg = "light"
@@ -23,5 +24,6 @@ function! SetBackgroundMode(...)
   endif
 endfunction
 
-call SetBackgroundMode()
+" call SetBackgroundMode()
+call timer_start(1, "SetBackgroundMode", {"repeat": 0})
 call timer_start(3000, "SetBackgroundMode", {"repeat": -1})

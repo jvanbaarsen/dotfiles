@@ -21,7 +21,6 @@ echo "- Creating needed folders"
 mkdir -p ~/Development
 mkdir -p ~/.tmp
 mkdir -p ~/.config
-mkdir -p ~/.hammerspoon
 
 echo "- Linking files"
 ln -nfs "$(pwd)/.zshrc" "$HOME/.zshrc"

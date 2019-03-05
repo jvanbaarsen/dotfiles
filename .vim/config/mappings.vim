@@ -15,7 +15,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 map Q <Nop>
-map - <Nop>
+" map - <Nop>
 
 command! W w
 command! Q q
