@@ -66,6 +66,7 @@ cask "figma"
 cask "tunnelblick"
 cask "zoomus"
 cask "font-source-code-pro"
+cask "telegram"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
