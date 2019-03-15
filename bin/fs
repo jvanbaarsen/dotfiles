@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -f "./Procfile.custom" ]; then
+  foreman start -f Procfile.custom
+else
+  foreman start
+fi

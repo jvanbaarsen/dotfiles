@@ -70,7 +70,6 @@ alias gwip='git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit 
 # Ruby/Rails Specific aliases
 alias remi='be rake db:migrate && be rake db:migrate RAILS_ENV=test'
 alias rero='be rake db:rollback && be rake db:rollback RAILS_ENV=test'
-alias fs='foreman start'
 alias ru='rubocop'
 alias rc='rails console'
 alias rrg='rails routes | grep'
