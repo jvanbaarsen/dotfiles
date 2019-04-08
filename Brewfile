@@ -63,7 +63,7 @@ cask "firefox"
 cask "spectacle"
 cask "hammerspoon"
 cask "figma"
-cask "tunnelblick"
+cask "viscosity"
 cask "zoomus"
 cask "font-source-code-pro"
 cask "telegram"
@@ -71,6 +71,6 @@ cask "telegram"
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
 mas "1password", id: 1333542190
-mas "markoff", id: 1084713122
+mas "iawriter", id: 775737590
 mas "daisydisk", id: 411643860
 mas "gifox", id: 1082624744

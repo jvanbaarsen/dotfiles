@@ -22,7 +22,7 @@ Keys = {
   ["triggers"] = {
     ["Activity Monitor"] = {{{"ctrl", "alt", "cmd"}, "A"}, {hyper, "5"}},
     ["Terminal"] = {{{"ctrl"}, "1"}, {hyper, "T"}},
-    ["Firefox"] = {{{"ctrl"}, "2"}, {hyper, "F"}},
+    ["Google Chrome"] = {{{"ctrl"}, "2"}, {hyper, "B"}},
     ["Slack"] = {{{"ctrl"}, "0"}, {hyper, "S"}},
     ["iA Writer"] = {{{"ctrl"}, "="}, {hyper, "R"}},
   },

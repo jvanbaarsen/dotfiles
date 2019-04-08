@@ -26,7 +26,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-rhubarb'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'w0rp/ale'
-Plug 'andymass/vim-matchup'
+" Plug 'andymass/vim-matchup'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
 Plug 'jeffkreeftmeijer/vim-dim'
