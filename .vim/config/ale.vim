@@ -15,6 +15,7 @@ let g:ale_linters={
 \  'erb': ['erb'],
 \  'rust': ['cargo'],
 \  'markdown': ['vale'],
+\  'python': ['flake8']
 \}
 let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],

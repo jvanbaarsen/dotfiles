@@ -67,6 +67,7 @@ cask "viscosity"
 cask "zoomus"
 cask "font-source-code-pro"
 cask "telegram"
+cask "selfcontrol"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
@@ -74,3 +75,4 @@ mas "1password", id: 1333542190
 mas "iawriter", id: 775737590
 mas "daisydisk", id: 411643860
 mas "gifox", id: 1082624744
+mas "micro-snitch", id: 972028355

@@ -4,14 +4,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
-" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSuite'] }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'lifepillar/vim-mucomplete'
@@ -31,8 +31,9 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'honza/vim-snippets'
-Plug 'slashmili/alchemist.vim'
+" Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'justinmk/vim-dirvish'
 
 call plug#end()
 

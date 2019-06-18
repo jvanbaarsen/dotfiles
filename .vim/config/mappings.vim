@@ -6,7 +6,7 @@ map <Leader>sn :sp ~/.vim/UltiSnips<CR>
 map <Leader>h :nohl<cr>
 map <Leader>reload :source $MYVIMRC<CR>
 nnoremap <Leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
-map <Leader>r :Vexplore .<CR>
+map <Leader>r :NERDTreeToggle<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -32,3 +32,18 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 " Disable search Highlight with Enter
 nnoremap <cr> :noh<CR><CR>:<backspace>
+
+
+function! SetHeadlessMode()
+  let currentMode = $CHROME_HEADLESS
+  if currentMode == "false"
+    echo "🔮😰 Running headless"
+    let $CHROME_HEADLESS = "true"
+  else
+    let $CHROME_HEADLESS = "false"
+    echo "🖥 🍿 Running in foreground"
+  endif
+
+endfunction
+
+command! Headless call SetHeadlessMode()

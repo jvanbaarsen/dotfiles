@@ -51,6 +51,7 @@ alias gdf='g diff'
 alias gplr='g pull --rebase'
 alias gpl='g pull'
 alias gc='g commit --verbose'
+alias gf='git-fixup'
 alias gsc='rake && ru && gc'
 alias gls='g lg'
 alias gaa='g add --all'
@@ -80,6 +81,9 @@ alias glp='cd frontend/gulp; gulp watch'
 # Disable some auto correct features
 alias cb='nocorrect cb'
 alias be='nocorrect bundle exec'
+
+# Python stuff
+alias py='python3'
 
 unalias g
 
