@@ -21,9 +21,9 @@ Keys = {
   },
   ["triggers"] = {
     ["Activity Monitor"] = {{{"ctrl", "alt", "cmd"}, "A"}, {hyper, "5"}},
-    ["Terminal"] = {{{"ctrl"}, "1"}, {hyper, "T"}},
-    ["Google Chrome"] = {{{"ctrl"}, "2"}, {hyper, "B"}},
-    ["Slack"] = {{{"ctrl"}, "0"}, {hyper, "S"}},
+    ["Terminal.app"] = {{{"ctrl"}, "2"}, {hyper, "T"}},
+    ["Google Chrome"] = {{{"ctrl"}, "3"}, {hyper, "B"}},
+    ["Slack"] = {{{"ctrl"}, "4"}, {hyper, "S"}},
     ["iA Writer"] = {{{"ctrl"}, "="}, {hyper, "R"}},
   },
 }

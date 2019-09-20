@@ -45,6 +45,7 @@ alias rr='rake'
 
 # Git stuff
 alias gp='g push'
+alias gs='tig status'
 alias gb='g checkout'
 alias gbl='fbr'
 alias gdf='g diff'
@@ -53,7 +54,7 @@ alias gpl='g pull'
 alias gc='g commit --verbose'
 alias gf='git-fixup'
 alias gsc='rake && ru && gc'
-alias gls='g lg'
+alias gls='tig'
 alias gaa='g add --all'
 alias gbc='gb --track -b'
 alias gnuke='git-nuke'
@@ -77,6 +78,8 @@ alias rrg='rails routes | grep'
 
 # AppSignal related aliases
 alias glp='cd frontend/gulp; gulp watch'
+alias cl='cd ~/Development/component-library'
+alias dl='cd ~/Development/design-language'
 
 # Disable some auto correct features
 alias cb='nocorrect cb'
