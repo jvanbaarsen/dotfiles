@@ -10,3 +10,4 @@ project-notes.txt
 .notags
 .unused.yml
 Procfile.custom
+.tool-versions

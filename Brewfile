@@ -50,7 +50,6 @@ cask "transmission"
 cask "vlc"
 cask "authy"
 cask "bartender"
-cask "divvy"
 cask "gpg-suite"
 cask "aerial"
 cask "whatsapp"
@@ -60,7 +59,6 @@ cask "iterm2"
 cask "docker"
 cask "ngrok"
 cask "firefox"
-cask "spectacle"
 cask "hammerspoon"
 cask "figma"
 cask "viscosity"
@@ -72,7 +70,7 @@ cask "selfcontrol"
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
 mas "1password", id: 1333542190
-mas "iawriter", id: 775737590
 mas "daisydisk", id: 411643860
 mas "gifox", id: 1082624744
 mas "micro-snitch", id: 972028355
+mas "bear", id: 1091189122
