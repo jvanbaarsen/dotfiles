@@ -34,6 +34,9 @@ Plug 'honza/vim-snippets'
 " Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'justinmk/vim-dirvish'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 

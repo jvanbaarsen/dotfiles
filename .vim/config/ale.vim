@@ -11,7 +11,7 @@ let g:ale_linters={
 \  'elixir': ['credo'],
 \  'sass': ['sass-lint'],
 \  'javascript': ['eslint'],
-\  'ruby': ['ruby', 'rubocop'],
+\  'ruby': ['ruby', 'standardrb', 'rubocop'],
 \  'erb': ['erb'],
 \  'rust': ['cargo'],
 \  'markdown': ['vale'],
@@ -19,6 +19,7 @@ let g:ale_linters={
 \}
 let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'ruby': ['standardrb'],
 \ 'elixir': ['mix_format'],
 \}
 let g:ale_ruby_rubocop_executable='bundle'

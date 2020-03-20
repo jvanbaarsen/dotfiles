@@ -21,6 +21,8 @@ alias tks='tmux kill-session'
 alias trs='tmux rename-session'
 alias tas='tm'
 alias tds='tmux detach-client'
+alias tx='tmuxinator'
+alias txs='tmuxinator start'
 alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
 alias dinit='eval "$(docker-machine env default)"'
 alias genssl='openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr'
@@ -75,6 +77,10 @@ alias rero='be rake db:rollback && be rake db:rollback RAILS_ENV=test'
 alias ru='rubocop'
 alias rc='rails console'
 alias rrg='rails routes | grep'
+alias hl='heroku local'
+
+# Redwood related aliases
+alias rw='yarn redwood'
 
 # AppSignal related aliases
 alias glp='cd frontend/gulp; gulp watch'

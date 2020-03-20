@@ -41,8 +41,10 @@ export LANG=en_US.UTF-8
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 eval "$(direnv hook zsh)"
-export EDITOR=vim
-eval "$(rbenv init - zsh)"
+export EDITOR=nvim
+
+test -e "$(brew --prefix asdf)/asdf.sh" && source "$(brew --prefix asdf)/asdf.sh"
+test -e "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" && source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 
 export PATH=".git/safe/../../bin:$PATH"
 export PATH=$HOME/dotfiles/bin:$PATH
@@ -60,9 +62,6 @@ export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # export BAT_THEME="Monokai Extended Light"
 
-
-test -e "$(brew --prefix asdf)/asdf.sh" && source "$(brew --prefix asdf)/asdf.sh"
-test -e "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" && source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
-
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jeroen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"

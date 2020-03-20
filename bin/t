@@ -4,6 +4,8 @@ if [ -x "$(which runtest)" ] ; then
   runtest
 elif [ -x "$(which runtests)" ] ; then
   runtests
+elif [ -x "$(which bin/test)" ] ; then
+  bin/test
 else
   if [ -x "$(which rubocop)" ] ; then
     rubocop
