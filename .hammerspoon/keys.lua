@@ -18,6 +18,7 @@ Keys = {
     ["Fullscreen window"] = {{{"alt", "cmd"}, "F"}, {meh, "F"}},
     ["Left 50% window"] = {{{"alt", "cmd"}, "["}, {meh, "H"}},
     ["Right 50% window"] = {{{"alt", "cmd"}, "]"}, {meh, "L"}},
+    ["Center window"] = {{{"alt", "cmd"}, "c"}, {meh, "C"}},
   },
   ["triggers"] = {
     ["Activity Monitor"] = {{{"ctrl", "alt", "cmd"}, "A"}, {hyper, "5"}},
