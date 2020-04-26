@@ -65,6 +65,8 @@ alias grc='git rebase --continue'
 alias grmerged='git-sweep'
 alias grrebased='git branch -vv | grep -v "origin/" | awk '{print $1}' | xargs git branch -D'
 alias gpr='git pull-request'
+alias gprl='g pr list'
+alias gprc='g pr checkout'
 alias gfpr='!f() { git fetch origin refs/pull/$1/head:pr/$1; } ; f'
 
 # Override the ZSH git plugin gwip (its bugged)
