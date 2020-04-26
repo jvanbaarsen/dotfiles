@@ -21,6 +21,7 @@ let g:ale_fixers={
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \ 'ruby': ['standardrb'],
 \ 'elixir': ['mix_format'],
+\ 'javascript': ['eslint']
 \}
 let g:ale_ruby_rubocop_executable='bundle'
 let g:ale_javascript_eslint_executable='yarn'
