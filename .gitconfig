@@ -33,7 +33,5 @@
   templatedir = ~/.git_template
 [rebase]
 	autosquash = true
-[merge]
-	conflictstyle = diff3
 [diff "ansible-vault"]
 	textconv = ansible-vault view

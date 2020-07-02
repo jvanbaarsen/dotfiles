@@ -16,7 +16,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'lifepillar/vim-mucomplete'
-Plug 'sirver/ultisnips'
+
+" Ultisnips is locked at this commit because it is showing double Snippet suggestions otherwise
+Plug 'sirver/ultisnips', { 'commit': '43b059bf1c20a1d328b7499c45332d367620c541'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
