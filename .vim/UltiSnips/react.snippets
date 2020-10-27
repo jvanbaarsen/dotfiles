@@ -12,9 +12,11 @@ snippet rcoms "Create stateless react component"
 import React from "react"
 import PropTypes from "prop-types"
 
-const ${1:ClassName} = (props) => (
-	${0:<div />}
-)
+const ${1:ClassName} = (props) => {
+	return (
+		${0:<div />}
+	)
+}
 
 export default $1
 endsnippet
