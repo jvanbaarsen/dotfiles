@@ -1,5 +1,5 @@
 priority 10
-extends html, react, jsx
+extends html
 
 snippet im "import xyz from 'xyz'"
 import ${1} from "${2:$1}"
@@ -23,6 +23,9 @@ snippet fff "() => {}" i
 (${1}) => {${2}}
 endsnippet
 
+######
+# Jest / RTL specific
+######
 snippet shallow "Jest default shallow test file"
 import React from "react"
 import { shallow } from "enzyme"
@@ -51,8 +54,52 @@ test("${1:name}", () => {
 })
 endsnippet
 
-snippet descr "Jest Descrive case"
+snippet des "Jest Describe case"
 describe("${1:description}", () => {
 	${2}
 })
+endsnippet
+
+######
+# React specific
+######
+snippet div. "Div with className"
+<div className="${1:ClassName}">
+	${0}
+</div>
+endsnippet
+
+snippet rcoms "Create stateless react component"
+import React from "react"
+import PropTypes from "prop-types"
+
+const ${1:ClassName} = (props) => {
+	return (
+		${0:<div />}
+	)
+}
+
+export default $1
+endsnippet
+
+snippet rcom "Create react component"
+import React from "react"
+
+class ${1:ClassName} extends React.Component {
+	render() {
+		return (
+			${0:<div />}
+		)
+	}
+}
+
+export default $1
+endsnippet
+
+snippet comp "Basic component (Without imports)" b
+const ${1:CompName} = ({}) => {
+	return (
+		${0:<div />}
+	)
+}
 endsnippet

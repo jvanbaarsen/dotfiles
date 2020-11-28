@@ -32,6 +32,8 @@ source $HOME/dotfiles/zsh/functions
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/lib::/usr/local/php5/bin
 export PATH=$HOME/Qt5.5.1/5.5/clang_64/bin:$PATH
 
+export VIMCONFIG=$HOME/dotfiles/.vim
+
 eval "$(hub alias -s)"
 
 # We need to export this, for normal UTF-8 support -_-
@@ -65,3 +67,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jeroen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
+
+eval "$(gh completion -s zsh)"

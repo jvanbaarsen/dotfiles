@@ -1,0 +1,4 @@
+{
+  "diagnostic.displayByAle": false,
+  "snippets.userSnippetsDirectory": "~/dotfiles/.vim/snippets"
+}
