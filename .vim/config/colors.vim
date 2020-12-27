@@ -1,4 +1,8 @@
-colorscheme dim
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
+
+" vimenter * ++nested colorscheme gruvbox
 " highlight trailing spaces in annoying red
 highlight ExtraWhitespace ctermbg=1 guibg=red
 match ExtraWhitespace /\s\+$/
@@ -19,10 +23,13 @@ function! SetBackgroundMode(...)
 
   if &background !=? s:new_bg
       let &background = s:new_bg
-      AirlineTheme appsignal
+      " AirlineTheme gruvbox
   endif
 endfunction
 
-" call SetBackgroundMode()
+
+command! Dark call SetBackgroundMode()
+
+" " call SetBackgroundMode()
 call timer_start(1, "SetBackgroundMode", {"repeat": 0})
-call timer_start(3000, "SetBackgroundMode", {"repeat": -1})
+" call timer_start(3000, "SetBackgroundMode", {"repeat": -1})

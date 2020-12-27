@@ -1,4 +1,22 @@
 {
   "diagnostic.displayByAle": false,
-  "snippets.userSnippetsDirectory": "~/dotfiles/.vim/snippets"
+  "snippets.userSnippetsDirectory": "~/dotfiles/.vim/snippets",
+  "prettier.disableSuccessMessage": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "prisma"
+  ],
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true
 }

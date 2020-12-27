@@ -68,4 +68,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jeroen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
 
+source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
+
 eval "$(gh completion -s zsh)"

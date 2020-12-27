@@ -5,7 +5,7 @@ let g:AutoPairsMultilineClose=0
 " set wildmenu " Enhanced command line completion.
 " set wildmode=full " Complete files like a shell.
 " set shortmess+=c " Turn off completion messages
-" set completeopt=menu,menuone,preview,noinsert,noselect
+set completeopt=menu,menuone,preview
 " set complete=.,w,b,u,i
 
 " " mucomplete

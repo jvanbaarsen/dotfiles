@@ -1,7 +1,7 @@
 set nocompatible
 call plug#begin('~/.vim/plugged')
 
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'pantharshit00/vim-prisma'
@@ -14,6 +14,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
+Plug 'morhetz/gruvbox'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -24,14 +25,14 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-rhubarb'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 " Plug 'andymass/vim-matchup'
 " Plug '/usr/local/opt/fzf'
 " Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands'] }
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'jeffkreeftmeijer/vim-dim'
+" Plug 'jeffkreeftmeijer/vim-dim'
 " Plug 'honza/vim-snippets'
 " Plug 'slashmili/alchemist.vim'
 Plug 'justinmk/vim-dirvish'
@@ -39,10 +40,10 @@ Plug 'justinmk/vim-dirvish'
 
 Plug 'jparise/vim-graphql'
 
-Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
+" Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 runtime! config/**/*.vim
