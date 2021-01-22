@@ -45,8 +45,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 eval "$(direnv hook zsh)"
 export EDITOR=nvim
 
-test -e "$(brew --prefix asdf)/asdf.sh" && source "$(brew --prefix asdf)/asdf.sh"
-test -e "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" && source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
+. /usr/local/opt/asdf/asdf.sh
+# test -e "$(brew --prefix asdf)/asdf.sh" && source "$(brew --prefix asdf)/asdf.sh"
+# test -e "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" && source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 
 export PATH=".git/safe/../../bin:$PATH"
 export PATH=$HOME/dotfiles/bin:$PATH
@@ -61,13 +62,14 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # export BAT_THEME="Monokai Extended Light"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jeroen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
 
-source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
+# source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 
 eval "$(gh completion -s zsh)"
+

@@ -1,3 +1,29 @@
 snippet rai
 raise ${0:object}.inspect
 endsnippet
+
+snippet if "if-statement"
+if ${1:condition}
+  ${0:${VISUAL:code}}
+end
+endsnippet
+
+snippet pry "binding.pry"
+require "pry"; binding.pry
+endsnippet
+
+snippet def "def <name>..."
+def ${1:method_name}${3:(${2:args})}
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet defi "def initialize..."
+def initialize${2:(${1:args})}
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet saop "save_and_open_page"
+save_and_open_page
+endsnippet

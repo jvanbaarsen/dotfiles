@@ -15,7 +15,8 @@
     "typescript",
     "typescriptreact",
     "json",
-    "prisma"
+    "prisma",
+    "ruby"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true

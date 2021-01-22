@@ -8,6 +8,8 @@ map <Leader>reload :source $MYVIMRC<CR>
 nnoremap <Leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
 map <Leader>e :NERDTreeToggle<CR>
 " map <Leader>r :NERDTreeToggle<CR>
+map <Leader>t :split term://zsh<cr>
+
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -48,3 +50,4 @@ function! SetHeadlessMode()
 endfunction
 
 command! Headless call SetHeadlessMode()
+
