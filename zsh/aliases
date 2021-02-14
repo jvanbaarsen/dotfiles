@@ -81,6 +81,8 @@ alias rc='rails console'
 alias rrg='rails routes | grep'
 alias hl='heroku local'
 
+alias yt='yarn test'
+
 # Redwood related aliases
 alias rw='yarn redwood'
 
