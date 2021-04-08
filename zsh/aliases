@@ -85,6 +85,8 @@ alias yt='yarn test'
 
 # Redwood related aliases
 alias rw='yarn redwood'
+alias rwt='yarn run rwt'
+alias rwp='yarn run redwood prisma'
 
 # AppSignal related aliases
 alias glp='cd frontend/gulp; gulp watch'
