@@ -25,8 +25,8 @@ command! Q q
 
 nnoremap <leader><leader> <c-^>
 
-map <Leader>u :!rake db:migrate && rake db:migrate RAILS_ENV=test<cr>
-map <Leader>d :!rake db:rollback && rake db:rollback RAILS_ENV=test<cr>
+" map <Leader>u :!rake db:migrate && rake db:migrate RAILS_ENV=test<cr>
+" map <Leader>d :!rake db:rollback && rake db:rollback RAILS_ENV=test<cr>
 nmap <silent> <leader>k :TestNearest<CR>
 nmap <silent> <leader>K :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
