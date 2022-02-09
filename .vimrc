@@ -16,6 +16,7 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
@@ -30,6 +31,16 @@ Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
+Plug 'KurtPreston/vim-autoformat-rails'
+" disable auto matching parens
+let g:loaded_matchparen=1
+" don't render special chars (tabs, trails, ...)
+set nolist
+" if number column doesn't make sense to you, just don't render it
+set nonumber
+" lazy drawing
+set lazyredraw
+set ttyfast
 
 call plug#end()
 

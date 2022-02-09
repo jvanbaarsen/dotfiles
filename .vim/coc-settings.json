@@ -20,5 +20,17 @@
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
-  "tsserver.log": "verbose"
+  "tsserver.log": "verbose",
+  "solargraph.definitions": true,
+  "solargraph.diagnostics": true,
+  "solargraph.autoformat": true,
+  "solargraph.completion": true,
+  "codeLens.enable": true,
+  "solargraph.formatting": true,
+  "solargraph.checkGemVersion": true,
+  "snippets.extends": {
+    "javascriptreact": ["javascript"]
+  },
+  "snippets.autotrigger": true,
+  "snippets.snipmate.enable": false
 }
