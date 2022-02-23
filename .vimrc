@@ -17,7 +17,8 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
+Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-eunuch'
@@ -28,10 +29,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'jparise/vim-graphql'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 Plug 'KurtPreston/vim-autoformat-rails'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/vim-gist'
 " disable auto matching parens
 let g:loaded_matchparen=1
 " don't render special chars (tabs, trails, ...)

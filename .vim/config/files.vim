@@ -7,7 +7,11 @@ let g:projectionist_heuristics = {
   \     },
   \     "spec/*_spec.rb": {
   \       "type": "test",
-  \       "alternate": "{dirname}/{basename}.rb"
+  \       "alternate": "app/{dirname}/{basename}.rb"
+  \     },
+  \     "app/*.rb": {
+  \       "type": "source",
+  \       "alternate": "spec/{dirname}/{basename}_spec.rb"
   \     }
   \   },
   \   "app/frontend/javascripts/": {

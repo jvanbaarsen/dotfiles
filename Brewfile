@@ -8,6 +8,7 @@ tap "universal-ctags/universal-ctags"
 tap "joshuaclayton/formulae"
 tap "nexeck/homebrew-tmuxinator"
 tap "elastic/tap"
+tap "mongodb/brew"
 
 brew "ack"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
@@ -29,29 +30,24 @@ brew "imagemagick"
 brew "cmake"
 brew "bat"
 brew "tree"
-brew "mongodb"
+brew "mongodb-community@3.6"
 brew "unused"
 brew "tmux"
 brew "tmate"
 brew "fzf"
 brew "reattach-to-user-namespace"
 brew "asdf"
-brew "elastic/tap/elasticsearch-oss"
+brew "elastic/tap/elasticsearch-full"
+brew "gh"
 
 cask "chromedriver"
-cask "sip"
 cask "graphiql"
 cask "google-chrome"
 cask "alfred"
-cask "dash"
 cask "spotify"
-cask "slack"
-cask "transmission"
 cask "vlc"
 cask "authy"
-cask "bartender"
 cask "gpg-suite"
-cask "aerial"
 cask "whatsapp"
 cask "the-unarchiver"
 cask "docker"
@@ -60,15 +56,11 @@ cask "firefox"
 cask "hammerspoon"
 cask "figma"
 cask "viscosity"
-cask "zoomus"
 cask "font-source-code-pro"
 cask "telegram"
-cask "selfcontrol"
 
 mas "todoist", id: 585829637
 mas "medis", id: 1063631769
-mas "1password", id: 1333542190
 mas "daisydisk", id: 411643860
-mas "gifox", id: 1082624744
 mas "micro-snitch", id: 972028355
 mas "bear", id: 1091189122

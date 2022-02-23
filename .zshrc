@@ -26,6 +26,8 @@ SAVEHIST=20000
 stty start undef
 stty stop undef
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -36,7 +38,7 @@ source $HOME/dotfiles/zsh/aliases
 source $HOME/dotfiles/zsh/functions
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/lib::/usr/local/php5/bin
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew:/usr/local/lib::/usr/local/php5/bin
 export PATH=$HOME/Qt5.5.1/5.5/clang_64/bin:$PATH
 
 export VIMCONFIG=$HOME/dotfiles/.vim
@@ -48,11 +50,11 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/opt/homebrew/heroku/bin:$PATH"
 eval "$(direnv hook zsh)"
 export EDITOR=nvim
 
-. /usr/local/opt/asdf/asdf.sh
+. /opt/homebrew/opt/asdf/asdf.sh
 # test -e "$(brew --prefix asdf)/asdf.sh" && source "$(brew --prefix asdf)/asdf.sh"
 # test -e "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" && source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 
@@ -61,7 +63,7 @@ export PATH=$HOME/dotfiles/bin:$PATH
 
 source $HOME/dotfiles/zsh/prompt
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Always work in a tmux session if tmux is installed
 # ensure_tmux_is_running
@@ -74,7 +76,7 @@ export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jeroen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
+export PATH="/opt/homebrew/opt/mongodb-community@3.6/bin:$PATH"
 
 # source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 

@@ -3,8 +3,8 @@ chpwd() {
   ls -lrthG
 }
 
-dev() { cd ~/Development/$1; }
-_dev() { _files -W ~/Development -/; }
+dev() { cd ~/Code/$1; }
+_dev() { _files -W ~/Code -/; }
 compdef _dev dev
 
 function g {
@@ -68,20 +68,6 @@ tk() {
 
 ta() {
   tmux a -t $1
-}
-
-dt() {
-  touch $HOME/.tmp/USE_DARK_THEME; reload
-  echo "Colors changed, enjoy the dark colors"
-}
-
-lt() {
-  if [[ -a $HOME/.tmp/USE_DARK_THEME ]]; then
-    rm $HOME/.tmp/USE_DARK_THEME; reload
-    echo "Colors changed, don't forget to open a new terminal window for this to take effect"
-  else
-    echo "Already on light theme, nothing left for me todo!"
-  fi
 }
 
 git_push() {
