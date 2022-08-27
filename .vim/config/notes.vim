@@ -1,4 +1,5 @@
-:let g:notes_directories = ['~/Documents/Notes']
+:let g:notes_directories = ['/Users/jeroen/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/notes']
+:let g:notes_suffix = '.md'
 
 augroup NoWrapLineInNoteFile
     autocmd!

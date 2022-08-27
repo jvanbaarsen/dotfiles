@@ -35,6 +35,7 @@ Plug 'xolox/vim-misc'
 Plug 'KurtPreston/vim-autoformat-rails'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/vim-gist'
+Plug 'github/copilot.vim', { 'branch': 'release'}
 " disable auto matching parens
 let g:loaded_matchparen=1
 " don't render special chars (tabs, trails, ...)

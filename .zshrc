@@ -31,7 +31,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew git-extras)
+plugins=(git brew git-extras tmux gh)
+
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=true
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/zsh/aliases
@@ -85,8 +88,13 @@ eval "$(gh completion -s zsh)"
 # Disable homebrew auto update
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Increase ulimit to deal with projects with lots of files
+ulimit -n 10000
+
 
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
 # [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

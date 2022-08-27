@@ -32,6 +32,16 @@ let g:projectionist_heuristics = {
   \       "alternate": "app/frontend/javascripts/{dirname}/{basename}.jsx"
   \     }
   \   },
+  \   "redwood.toml": {
+  \     "*.js": {
+  \       "type": "source",
+  \       "alternate": "{dirname}/{basename}.test.js"
+  \     },
+  \     "*.test.js": {
+  \       "type": "test",
+  \       "alternate": "{dirname}/{basename}.js"
+  \     }
+  \   },
   \   "next.config.js": {
   \     "*.js": {
   \       "type": "source",

@@ -51,3 +51,4 @@ endfunction
 
 command! Headless call SetHeadlessMode()
 
+command! Ru :!rubocop %<tab>

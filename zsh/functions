@@ -3,6 +3,10 @@ chpwd() {
   ls -lrthG
 }
 
+cheat() {
+  curl cheat.sh/$1
+}
+
 dev() { cd ~/Code/$1; }
 _dev() { _files -W ~/Code -/; }
 compdef _dev dev
@@ -66,9 +70,9 @@ tk() {
   tmux kill-session -t $1
 }
 
-ta() {
-  tmux a -t $1
-}
+# ta() {
+#   tmux a -t $1
+# }
 
 git_push() {
   local stderr=$(\git "$@" 2> >(tee /dev/stderr | head -n 1))
@@ -164,5 +168,13 @@ function headless {
   else
     echo "🖥 🍿 Running in foreground"
     export CHROME_HEADLESS=false
+  fi
+}
+
+function note {
+  if [ $1 ]; then
+    vim /Users/jeroen/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/notes/$1.md
+  else
+    vim /Users/jeroen/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/notes/
   fi
 }
