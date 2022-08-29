@@ -48,5 +48,5 @@ set ttyfast
 
 call plug#end()
 
-" Plug 'vim-airline/vim-airline-themes'
+runtime! config/**/*.lua
 runtime! config/**/*.vim
