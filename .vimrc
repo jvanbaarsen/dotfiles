@@ -36,6 +36,9 @@ Plug 'KurtPreston/vim-autoformat-rails'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/vim-gist'
 Plug 'github/copilot.vim', { 'branch': 'release'}
+
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 " disable auto matching parens
 let g:loaded_matchparen=1
 " don't render special chars (tabs, trails, ...)
