@@ -10,3 +10,4 @@ let NERDTreeHighlightCursorline=1
 
 " Autoclose vim if NerdTree is only thing left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <leader>nf :NERDTreeFind<cr>

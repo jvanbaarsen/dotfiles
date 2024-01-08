@@ -94,6 +94,12 @@ alias cl='cd ~/Development/component-library'
 alias dl='cd ~/Development/design-language'
 alias build_staging='ansible-playbook build.yml -i inventories/staging.yml --tags=app'
 alias deploy_staging='ansible-playbook all.yml -i inventories/staging.yml --tags=deploy_app'
+alias vpn_up="wg-quick up vpn"
+alias vpn_down="wg-quick down vpn"
+alias staging_up="wg-quick up staging"
+alias staging_down="wg-quick down staging"
+alias prod_up="wg-quick up production"
+alias prod_down="wg-quick down production"
 
 # Disable some auto correct features
 alias cb='nocorrect cb'
@@ -101,6 +107,14 @@ alias be='nocorrect bundle exec'
 
 # Python stuff
 alias py='python3'
+
+# PenTest stuff
+alias msfconsole="/opt/metasploit-framework/bin/msfconsole"
+alias msfdb="/opt/metasploit-framework/bin/msfdb"
+alias gobust="gobuster -w /Users/jeroen/Code/thm/gobuster.txt"
+
+# General stuff
+alias dark="~/Documents/toggle-dark-mode.applescript"
 
 unalias g
 

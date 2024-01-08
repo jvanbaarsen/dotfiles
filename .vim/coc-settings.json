@@ -26,11 +26,13 @@
   "solargraph.diagnostics": true,
   "solargraph.autoformat": true,
   "solargraph.completion": true,
+  "solargraph.hover": true,
   "codeLens.enable": true,
   "solargraph.formatting": true,
   "solargraph.checkGemVersion": true,
   "snippets.extends": {
-    "javascriptreact": ["javascript"]
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
   },
   "snippets.autotrigger": true,
   "snippets.snipmate.enable": false

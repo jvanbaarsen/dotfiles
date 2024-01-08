@@ -35,6 +35,7 @@ plugins=(git brew git-extras tmux gh)
 
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOQUIT=false
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/zsh/aliases
@@ -56,10 +57,6 @@ export LANG=en_US.UTF-8
 export PATH="/opt/homebrew/heroku/bin:$PATH"
 eval "$(direnv hook zsh)"
 export EDITOR=nvim
-
-. /opt/homebrew/opt/asdf/asdf.sh
-# test -e "$(brew --prefix asdf)/asdf.sh" && source "$(brew --prefix asdf)/asdf.sh"
-# test -e "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" && source "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 
 export PATH=".git/safe/../../bin:$PATH"
 export PATH=$HOME/dotfiles/bin:$PATH
@@ -98,3 +95,14 @@ ulimit -n 10000
 #### END FIG ENV VARIABLES ####
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
+export PATH="$PATH:/Users/jeroen/.cargo/bin"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH=$(pyenv root)/shims:$PATH
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh

@@ -2,7 +2,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'pbrisbin/vim-mkdir'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'pantharshit00/vim-prisma'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -10,7 +10,6 @@ Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSuite'] }
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'morhetz/gruvbox'
@@ -29,16 +28,22 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'jparise/vim-graphql'
-Plug 'neoclide/coc.nvim'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 Plug 'KurtPreston/vim-autoformat-rails'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/vim-gist'
 Plug 'github/copilot.vim', { 'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'lewis6991/gitsigns.nvim', { 'branch': 'main'}
+Plug 'navarasu/onedark.nvim'
+
 " disable auto matching parens
 let g:loaded_matchparen=1
 " don't render special chars (tabs, trails, ...)

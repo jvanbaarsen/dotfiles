@@ -11,3 +11,4 @@ project-notes.txt
 .unused.yml
 Procfile.custom
 .tool-versions
+.ackrc

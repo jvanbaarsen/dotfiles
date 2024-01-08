@@ -1,5 +1,3 @@
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-let g:copilot_no_tab_map = v:true
 
 let g:coc_global_extensions = [
       \ 'coc-tsserver'
@@ -68,9 +66,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_next = '<tab>'
 
-" highlight link CocErrorSign Error
-" highlight link CocWarningSign Todo
-" highlight link CocInfoSign Identifier
-" highlight link CocFloating VisualNC
+highlight link CocErrorSign Error
+highlight link CocWarningSign Todo
+highlight link CocInfoSign Identifier
+highlight link CocFloating VisualNC

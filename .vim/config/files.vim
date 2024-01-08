@@ -1,6 +1,6 @@
 " Applies to all "projects" that are opened.
 let g:projectionist_heuristics = {
-  \   "Gemfile": {
+  \   "spec/": {
   \     "lib/*.rb": {
   \       "type": "source",
   \       "alternate": "spec/lib/{dirname}/{basename}_spec.rb"
@@ -12,6 +12,20 @@ let g:projectionist_heuristics = {
   \     "app/*.rb": {
   \       "type": "source",
   \       "alternate": "spec/{dirname}/{basename}_spec.rb"
+  \     }
+  \   },
+  \   "test/": {
+  \     "lib/*.rb": {
+  \       "type": "source",
+  \       "alternate": "test/lib/{dirname}/{basename}_test.rb"
+  \     },
+  \     "test/*_test.rb": {
+  \       "type": "test",
+  \       "alternate": "app/{dirname}/{basename}.rb"
+  \     },
+  \     "app/*.rb": {
+  \       "type": "source",
+  \       "alternate": "test/{dirname}/{basename}_test.rb"
   \     }
   \   },
   \   "app/frontend/javascripts/": {
@@ -40,6 +54,14 @@ let g:projectionist_heuristics = {
   \     "*.test.js": {
   \       "type": "test",
   \       "alternate": "{dirname}/{basename}.js"
+  \     },
+  \     "*.ts": {
+  \       "type": "source",
+  \       "alternate": "{dirname}/{basename}.test.ts"
+  \     },
+  \     "*.test.ts": {
+  \       "type": "test",
+  \       "alternate": "{dirname}/{basename}.ts"
   \     }
   \   },
   \   "next.config.js": {
