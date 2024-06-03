@@ -105,3 +105,4 @@ export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+eval "$(zellij setup --generate-auto-start zsh)"

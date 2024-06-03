@@ -1,0 +1,9 @@
+[window]
+
+option_as_alt = "Both"
+
+[font]
+
+normal.family = "0xProto Nerd Font Mono"
+
+size = 14.0
