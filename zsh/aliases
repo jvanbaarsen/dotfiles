@@ -68,6 +68,7 @@ alias gpr='git pull-request'
 alias gprl='g pr list'
 alias gprc='g pr checkout'
 alias gfpr='!f() { git fetch origin refs/pull/$1/head:pr/$1; } ; f'
+alias unfuck='bundle exec rubocop -a && npm run lint -- --fix'
 
 # Override the ZSH git plugin gwip (its bugged)
 unalias gwip

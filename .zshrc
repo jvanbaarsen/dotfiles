@@ -1,4 +1,3 @@
-
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the start of this file.
 # [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
@@ -6,7 +5,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export TERM="screen-256color"
+export TERM="xterm-256color"
 
 # Disable the freaking autocorrect
 unsetopt correct_all
@@ -33,8 +32,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew git-extras tmux gh)
 
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_AUTOQUIT=false
 
 source $ZSH/oh-my-zsh.sh
