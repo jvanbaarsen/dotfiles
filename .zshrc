@@ -105,4 +105,20 @@ export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
-eval "$(zellij setup --generate-auto-start zsh)"
+export ZELLIJ_AUTO_ATTACH=true
+if [[ -z "$ZELLIJ" ]]; then
+  if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+    # server_session=$(zellij list-sessions | grep "server"
+    # if [[ -z "$first_session" ]]; then
+    #   zellij
+    # else
+      zellij attach -c server
+    # fi
+  else
+    zellij
+  fi
+
+  if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+    exit
+  fi
+fi
