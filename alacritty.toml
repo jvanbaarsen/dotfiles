@@ -4,7 +4,9 @@ option_as_alt = "Both"
 
 [font]
 
-normal.family = "0xProto Nerd Font Mono"
+normal.family = "CaskaydiaMono Nerd Font"
+bold.family = "CaskaydiaMono Nerd Font"
+italic.family = "CaskaydiaMono Nerd Font"
 
 size = 15.0
 
