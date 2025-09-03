@@ -1,6 +1,8 @@
 # Show content when we LS into a folder
 chpwd() {
-  ls -lrthG
+  if [[ -z "$VSCODE_INJECTION" ]]; then
+   ls -lrthG
+  fi
 }
 
 cheat() {

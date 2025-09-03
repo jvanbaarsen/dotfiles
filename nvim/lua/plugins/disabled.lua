@@ -1,3 +1,3 @@
 return {
-  { "nvim-neotest/neotest", enabled = false },
+  -- { "nvim-neotest/neotest", enabled = false },
 }

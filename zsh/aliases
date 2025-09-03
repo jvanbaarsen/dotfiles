@@ -10,7 +10,6 @@ alias tophistory='history | awk '"'"'{a[$2]++}END{for(i in a){print a[i] " " i}}
 alias typeless='history | tail -n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
 alias s='screen'
 alias be='bundle exec'
-alias h='~/'
 alias bi='bundle install -j 8'
 alias codereview='v ~/Dropbox/notes/code-review-checklist.txt'
 alias v='vim'
@@ -35,6 +34,7 @@ alias wpd='bin/webpack-dev-server'
 alias hl='heroku local -p 3000'
 alias hlr='heroku local:run'
 alias mkdir="mkdir -p"
+alias ws="windsurf"
 
 # Note taking
 alias standup='v ~/Dropbox/notes/daily_standup.md'
@@ -91,9 +91,6 @@ alias rwt='yarn run rwt'
 alias rwp='yarn run redwood prisma'
 
 # AppSignal related aliases
-alias glp='cd frontend/gulp; gulp watch'
-alias cl='cd ~/Development/component-library'
-alias dl='cd ~/Development/design-language'
 alias build_staging='ansible-playbook build.yml -i inventories/staging.yml --tags=app'
 alias deploy_staging='ansible-playbook all.yml -i inventories/staging.yml --tags=deploy_app'
 alias vpn_up="wg-quick up vpn"
@@ -102,6 +99,16 @@ alias staging_up="wg-quick up staging"
 alias staging_down="wg-quick down staging"
 alias prod_up="wg-quick up production"
 alias prod_down="wg-quick down production"
+alias wg_down="prod_down; staging_down; vpn_down"
+alias wg_up="prod_up; staging_up; vpn_up"
+alias prot="cd ~/Code/appsignal/appsignal-protocol/; vim"
+alias srv="cd ~/Code/appsignal/appsignal-server"
+alias c="zed"
+alias todos="cat ~/slaist/$(date +%F).md | pbcopy"
+alias slaist="~/Code/jvanbaarsen/slaist/target/release/slaist"
+
+# Personal stuff
+alias dsp="cd ~/Code/BitBakkers/dsp"
 
 # Disable some auto correct features
 alias cb='nocorrect cb'

@@ -30,7 +30,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew git-extras tmux gh)
+plugins=(git brew git-extras tmux gh direnv)
 
 ZSH_TMUX_AUTOSTART=false
 ZSH_TMUX_AUTOCONNECT=false
@@ -54,7 +54,6 @@ export LANG=en_US.UTF-8
 
 ### Added by the Heroku Toolbelt
 export PATH="/opt/homebrew/heroku/bin:$PATH"
-eval "$(direnv hook zsh)"
 export EDITOR=nvim
 
 export PATH=".git/safe/../../bin:$PATH"
@@ -93,32 +92,30 @@ ulimit -n 10000
 # [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
 
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
-export PATH="$PATH:/Users/jeroen/.cargo/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH=$(pyenv root)/shims:$PATH
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
-export ZELLIJ_AUTO_ATTACH=true
-if [[ -z "$ZELLIJ" ]]; then
-  if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-    # server_session=$(zellij list-sessions | grep "server"
-    # if [[ -z "$first_session" ]]; then
-    #   zellij
-    # else
-      zellij attach -c server
-    # fi
-  else
-    zellij
-  fi
 
-  if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-    exit
-  fi
-fi
+export CFLAGS="-I$(brew --prefix)/opt/openssl@1.1/include -I/$(brew --prefix)/opt/snappy/include -I/$(brew --prefix)/opt/zlib/include"
+export CPPFLAGS="-I$(brew --prefix)/opt/openssl@1.1/include -I/$(brew --prefix)/opt/snappy/include -I/$(brew --prefix)/opt/zlib/include"
+export LDFLAGS="-L$(brew --prefix)/opt/openssl@1.1/lib -L/$(brew --prefix)/opt/snappy/lib -L/$(brew --prefix)/opt/zlib/lib"
+export OPENSSL_DIR="$(brew --prefix)/opt/openssl@1.1"
+export OPENSSL_ROOT_DIR="$(brew --prefix)/opt/openssl@1.1"
+export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl@1.1/lib/pkgconfig:$(brew --prefix)/opt/zlib/lib/pkgconfig:$(brew --prefix)/opt/zstd/lib/pkgconfig"
+export LIBCLANG_PATH="/Applications/Xcode.app/Contents/Frameworks"
+export RSYSLOGD_PATH=$(brew --prefix)/sbin/rsyslogd
+export CONFIG_FILE=/Users/jeroen/Code/appsignal/appsignal-processor-rs/config.toml
+
+. "$HOME/.cargo/env"
+
+eval "$(direnv hook zsh)"
