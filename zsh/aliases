@@ -13,7 +13,6 @@ alias be='bundle exec'
 alias bi='bundle install -j 8'
 alias codereview='v ~/Dropbox/notes/code-review-checklist.txt'
 alias v='vim'
-alias z='tmux resize-pane -Z'
 alias tl='tm'
 alias tls='tm'
 alias tks='tmux kill-session'
@@ -35,6 +34,17 @@ alias hl='heroku local -p 3000'
 alias hlr='heroku local:run'
 alias mkdir="mkdir -p"
 alias ws="windsurf"
+
+alias cd="zd"
+zd() {
+  if [ $# -eq 0 ]; then
+    builtin cd ~ && return
+  elif [ -d "$1" ]; then
+    builtin cd "$1"
+  else
+    z "$@" && printf "\U000F17A9 " && pwd || echo "Error: Directory not found"
+  fi
+}
 
 # Note taking
 alias standup='v ~/Dropbox/notes/daily_standup.md'

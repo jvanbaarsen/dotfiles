@@ -119,3 +119,4 @@ export CONFIG_FILE=/Users/jeroen/Code/appsignal/appsignal-processor-rs/config.to
 . "$HOME/.cargo/env"
 
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh)"
